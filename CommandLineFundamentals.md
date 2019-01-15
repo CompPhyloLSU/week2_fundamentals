@@ -17,7 +17,7 @@
 - [ ] Naming files and folders
 	- CamelCaseLooksLikeThis
 	- `underscores_can_work`
-	- __NEVER__ use spaces!! Spaces confuse terminal 
+	- __NEVER__ use spaces!! Spaces confuse terminal
 	- Generally a good idea to avoid special characters
 - [ ] Plain text files
 	- Human readable
@@ -42,7 +42,7 @@
 	- double tap tab will list all files with that beginning
 	- Scrolling through history
 - [ ] Commands related to navigating the filesystem
-	- 'touch filename.txt' will create file  
+	- 'touch filename.txt' will create file
 	- `pwd` - print working directory - or - "where am I?"
 	- `ls` - list directory contents
 		- 'ls -l' - long list
@@ -77,7 +77,7 @@
 	- `less` - view the contents of a file a little at a time nice way to scroll through
 	- `touch filename.txt` - quickly create a new file
 	- `nano filename.txt` - this is actually an entire text editing program (type text like normal)
-	- 'write out is save' and ^=control (^O) exit (^X) 
+	- 'write out is save' and ^=control (^O) exit (^X)
 	- `wc` - print out the length of a file in lines, words, and characters
 	- `>>` - appends to file
 		- echo "some text here" >> myTextFile.txt
@@ -104,9 +104,26 @@
 		- `|` - the Unix pipe can be used to send the output of one command into the input of another
 			- `history | tail -n 20 >> endOfHistory.txt`
 
+	- [ ] Miscellany
+			- The `-h` flag with `ls` or `du`
+			- `|` - the Unix pipe can be used to send the output of one command into the input of another
+				- `history | tail -n 20 >> endOfHistory.txt`
+			- `wc` - print out the length of a file in lines, words, and characters
+			- `>>` - appends to file
+			  - echo "some text here" >> myTextFile.txt
+			- `>` - writes to (or over!) file
+			  - echo "more text here" > myTextFile.txt
+			- `grep` - find only lines matching some particular string
+			- Can create a variable and assign value using `=`
+				- myVariable=2
+			- Can print value of variable using `echo` and starting name with `$`
+				- echo $myVariable
+			- Look at `/bin/` and `/usr/bin/`
+			- `sudo` - The master control switch
+
 
 ```
-Use the commands you just learned to create and navigate this hierarchy of folders and 
+Use the commands you just learned to create and navigate this hierarchy of folders and
 files. This should be done entirely on the command line. Add some text content to the .txt
 files after you create them.
 
