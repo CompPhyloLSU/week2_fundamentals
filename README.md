@@ -1,14 +1,6 @@
-# Fundamentals (Week 2)
+# Computing Fundamentals (Week 2)
 
-This week we will cover:
+This week we will cover some fundamental computing skills:
 
-- Some fundamental computing skills
 	- Working at the command line
-	- git
-
-- Phylogenetic basics
-	- Parts of trees
-	- Reading trees
-	- Interpreting relationships
-	- Rooting
-	- Branch lengths
+	- git/GitHub
