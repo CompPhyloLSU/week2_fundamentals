@@ -83,7 +83,7 @@ __Git commit process__ - Git organizes files in a project directory in 3 categor
     - `git revert <BAD_COMMIT_HASH>`
 
 
-- [ ] Branching
+- [ ] __Branching__
   - So far, we have only been discussing git commands in the context of a _single version_ of a repository. However, one of the most powerful features of git is its ability to handle branches, or different versions of a project.
   - By creating different branches, you can try changes to a project that don't affect the primary/main version. If the changes look good, you can then merge them back into the main version (Master branch).
   - `git branch featureOne` will create a new branch for your project.
@@ -105,8 +105,17 @@ __Git commit process__ - Git organizes files in a project directory in 3 categor
 
 __A more advanced Git workflow__ - In this schematic of a git workflow, the project has three branches. Two of the branches (yellow and teal) are being used to try out new features. Note the separate commits (circles) to these branches as progress is made. The yellow feature branch is then merged back into Master, once that feature is successfully implemented.
 
+- [ ] __Forking__
+  - GitHub also includes one more git action that facilitates collaboration
+  - `forking` is the act of creating your own personal copy of a repository that someone else has created or owns
+  - This model allows you to edit and keep track of code, even if you don't have permissions to push your changes to the original repository
+  - To create your own fork of a project, simply click the `fork` button in the upper right of any repository page on GitHub
+  - Now you can make commits to your fork of the repository.
+  - If you think some change that you've made (and committed) in your fork of the repository would benefit the original project, you can submit a `pull request`. This is a request for the owner of the original repository to pull in your changes and make them part of the original repository.
+  - You can create a `pull request` by clicking on the `New pull request` button of your fork. Any requests for pulls into a repository can be reviewed by clicking on the _Pull Requests_ tab at the top of a repository page.
 
-- [ ] Collaborative coding
+
+- [ ] __Collaborative coding (in class exercise)__
   - We are going to work together to fix and expand a catalog of animals found in Louisiana.
   - I've started this catalog and posted it here: https://github.com/IntroToCompBioLSU/LAFauna
   - However, I've made some mistakes and a lot more work needs to be done. To collaborate on this, let's all first make our own copy of the repository so that we can suggest edits and additions. To do this, click the `Fork` button in the upper right of the repository. Remember that forking will make a copy of the entire repository and associate it with your account.
@@ -147,7 +156,7 @@ __A more advanced Git workflow__ - In this schematic of a git workflow, the proj
 - [Software Carpentry Git Tutorial](http://swcarpentry.github.io/git-novice/)
 
 
-## Weekly Assignment
+## Weekly Assignment (Due before class on Tuesday)
 
 1. Create a new repo on your GitHub profile called `myTestRepo`, initialized with a README.
 2. `clone` this repository to your local computer using `git clone`
