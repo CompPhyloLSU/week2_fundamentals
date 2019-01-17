@@ -18,6 +18,15 @@
     - Explore a bit with `cd` and `cat`
 
 
+- [ ] __Cloning a repository__
+  - Instead of creating a repository from scratch, you can also copy one
+  - As an example, go to our class GitHub page repository for this week's notes: https://github.com/CompPhyloLSU/week2_fundamentals
+  - To clone (i.e., copy) this repository, click the `Clone or download` button.
+  - The window that pops up should have a header that read `Clone with HTTPS`
+  - Click on the clipboard icon on the right to copy the URL for the repository
+  - Open up Terminal, navigate to the location where you'd like to keep the repository, then type the command `git clone <PASTE_COPIED_PATH_HERE>`
+  - If you have an internet connection, you should now have a copy of the repository on your computer
+
 ![Basic Git Workflow](https://raw.githubusercontent.com/IntroToCompBioLSU/week3/master/images/basicWorkflow.png)
 
 __The simplest Git workflow__ - The single line shows a workflow that uses only one branch, called Master. Circles represent commits made to Master as the project progresses.
@@ -97,8 +106,55 @@ __Git commit process__ - Git organizes files in a project directory in 3 categor
 __A more advanced Git workflow__ - In this schematic of a git workflow, the project has three branches. Two of the branches (yellow and teal) are being used to try out new features. Note the separate commits (circles) to these branches as progress is made. The yellow feature branch is then merged back into Master, once that feature is successfully implemented.
 
 
+- [ ] Collaborative coding
+  - We are going to work together to fix and expand a catalog of animals found in Louisiana.
+  - I've started this catalog and posted it here: https://github.com/IntroToCompBioLSU/LAFauna
+  - However, I've made some mistakes and a lot more work needs to be done. To collaborate on this, let's all first make our own copy of the repository so that we can suggest edits and additions. To do this, click the `Fork` button in the upper right of the repository. Remember that forking will make a copy of the entire repository and associate it with your account.
+  - Now we have our own copy, but it would be more convenient to work with these files on our local machine. So, next we need to __clone__ the repository to our own computers.
+	  - Open up Terminal
+	  - Use `cd` to change directories to the location where you want to store this repository (e.g., `~/Desktop/`)
+	  - Now go back to your fork of the repository on GitHub and click the green `Clone or download` button in the upper right.
+		- Click the blue `Use HTTPS` link in the upper right of the dropdown menu
+		- Copy the URL that GitHub provides, which starts https://github.com/...
+		- Now navigate to the place on your computer where you want to store your repository (e.g., the desktop) and run `git clone <GITHUB_URL>`
+ - You should now have a complete version of the "LAFauna" repository on your computer. Use `cd` to change directories into your repository folder.
+ - Go ahead and pair up into groups of two. Each group will then be assigned one of the groups of animals. You will need to do a few things for your group:
+	 - First, make a new branch with a name that indicates which group you're working on and checkout that branch.
+	 - Now, in the folder for your group, look at the list of scientific names of the 6 species. With some internet research, figure out which of these species has been incorrectly included because it does not actually occur in Louisiana and remove it from the list.
+	 - Also, create a corresponding file for the common names of the remaining species, with the same file naming scheme (e.g., LAFish_common.txt). Look up the common names for the remaining 5 species and add them to this file.
+	 - Make a commit to your branch after you add or delete each species name.
+ - Because you cloned this repository directly from GitHub, git automatically remembers this original repostitory. Try running `git remote -v`. Note the name git uses for this remote repository - origin.
+ - Now we're going to send our updates back to origin. In git, this is called "pushing". A couple of things to note: you can push any branch individually, and the changes are sent to _your_ fork of the repo.
+	 - `git push origin <YOUR_BRANCH>`
+	 - GitHub may require that you manually enter your username and password before it accepts the push. If you get tired of doing this, you can set up automatic authentication using ssh.
+ - Go back to your fork on GitHub and check that the updates have been pushed. Note that you can look at different branches by selecting them from the dropdown menu in the upper left.
+ - If all looks good, create a pull request to send your changes back to the main repository on the class page (like you did for last week's assignment).
+ - Let me know when you've done this, and I'll merge all the pull requests into the class repo.
+ - Once everyone's updates have been merged, you might want to update your fork with all of the changes. The best way to do this is with a "pull". But first, you'll need to add the class repo as a remote:
+	 - `git remote add class https://github.com/IntroToCompBioLSU/LAFauna.git`
+	 - I've used the name __class__ to indicate this new remote, but you can name it whatever you want.
+	 - `git remote -v`
+	 - `git pull class master` (Pulling changes from the master branch of class)
+ - Now you've synced your local version of the fork using the class repo, but your fork on GitHub still needs to be updated.
+ - Paying attention to which branch you're on locally, run `git push origin <YOUR_BRANCH>`.
+ - Now go back to your fork on GitHub and verify that the updates are there.
+
+
 ## Git Resources
 
 - [Pro Git Book](https://git-scm.com/book/en/v2)
 - [Git It Tutorial Software](https://github.com/jlord/git-it-electron/releases)
 - [Software Carpentry Git Tutorial](http://swcarpentry.github.io/git-novice/)
+
+
+## Weekly Assignment
+
+1. Create a new repo on your GitHub profile called `myTestRepo`, initialized with a README.
+2. `clone` this repository to your local computer using `git clone`
+3. Locally, create some files that contain some text inside this repository
+4. `add`, then `commit` these new files to your repository
+5. Create and checkout a new branch for your repository
+6. `add` and `commit` some changes to this 2nd branch
+7. `push` your commits back to GitHub
+8. `commit` some changes to the repository directly through the GitHub web interface (clicking on the pencil edit icon)
+9. Run `git pull` on your local machine to update your local copy of the repo with the latest changes from GitHub.
