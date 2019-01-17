@@ -18,7 +18,7 @@
     - Explore a bit with `cd` and `cat`
 
 
-![Basic Git Workflow](images/basicWorkflow.png)
+![Basic Git Workflow](https://raw.githubusercontent.com/IntroToCompBioLSU/week3/master/images/basicWorkflow.png)
 
 __The simplest Git workflow__ - The single line shows a workflow that uses only one branch, called Master. Circles represent commits made to Master as the project progresses.
 
@@ -33,7 +33,7 @@ __The simplest Git workflow__ - The single line shows a workflow that uses only 
   - `git log` - See what commits have been made to this project
     - Since we haven't yet done anything with our repository, there is nothing yet to show in the log. First, we need to commit something.
 
-![Git Stages](images/GitStages.png)
+![Git Stages](https://raw.githubusercontent.com/IntroToCompBioLSU/week3/master/images/GitStages.png)
 
 __Git commit process__ - Git organizes files in a project directory in 3 categories. While all files are stored in the project directory, changes in these files are not automatically included in the repository. You must first get ready to include them by adding them to the staging area. When you're ready to record the files in the repository, you need to commit the changes you've made. Only then will they be retrievable later on.
 
@@ -92,7 +92,7 @@ __Git commit process__ - Git organizes files in a project directory in 3 categor
   - Note that when you look at `git log --graph` now, it's as if the feature branch never existed. The changes made there are now seamlessly integrated into the master branch.
 
 
-![Project Git Workflow](images/featureBranch.png)
+![Project Git Workflow](https://raw.githubusercontent.com/IntroToCompBioLSU/week3/master/images/featureBranch.png)
 
 __A more advanced Git workflow__ - In this schematic of a git workflow, the project has three branches. Two of the branches (yellow and teal) are being used to try out new features. Note the separate commits (circles) to these branches as progress is made. The yellow feature branch is then merged back into Master, once that feature is successfully implemented.
 
